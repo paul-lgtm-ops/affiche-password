@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="afficher_et_masquer_password.css">
+    <script src="https://kit.fontawesome.com/96dcb489df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="">
+        <label> Mots de passe</label>
+        <div class="mdp">
+            <input type="password">
+            <i class="fas fa-eye"></i>
+        </div>
+    </form>
+    <script>
+        let input=document.querySelector('.mdp input');
+        let showBtn=document.querySelector('.mdp i');
+        showBtn.onclick=function(){
+            if(input.type==="password"){
+                input.type="text";
+                showBtn.classList.add('active');
+            }else{
+                input.type="password";
+                showBtn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
